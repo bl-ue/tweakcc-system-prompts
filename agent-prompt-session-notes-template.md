@@ -1,8 +1,11 @@
 <!--
 name: 'Agent Prompt: Session notes template'
 description: Template structure for session notes tracking coding work and decisions
-ccVersion: 2.0.14
+ccVersion: 2.0.25
 -->
+
+# Session Title
+_A short and distinctive 5-10 word descriptive title for the session. Super info dense, no filler_
 
 # Task specification
 _What did the user ask to build? Any design decisions or other explanatory context_

@@ -1,7 +1,7 @@
 <!--
 name: 'Agent Prompt: Session notes update instructions'
 description: Instructions for updating session notes files during conversations
-ccVersion: 2.0.14
+ccVersion: 2.0.25
 variables:
   - MAX_SECTION_TOKENS
 -->
@@ -14,16 +14,17 @@ The file {{notesPath}} has already been read for you. Here are its current conte
 {{currentNotes}}
 </current_notes_content>
 
-Your ONLY task is to use the Edit tool EXACTLY ONCE to update the notes file, then stop. Do not call any other tools.
+Your ONLY task is to use the Edit tool to update the notes file, then stop. You can make multiple edits (update every section as needed) - make all Edit tool calls in parallel in a single message. Do not call any other tools.
 
 CRITICAL RULES FOR EDITING:
 - The file must maintain its exact structure with all sections, headers, and italic descriptions intact
--- NEVER modify, delete, or add section headers (## Task specification, ## Worklog, etc.)
--- NEVER modify or delete the italic text descriptions under each section header
--- ONLY update the content BELOW the italic descriptions within each existing section
+-- NEVER modify, delete, or add section headers (the lines starting with '##' like ## Task specification)
+-- NEVER modify or delete the italic _section description_ lines (these are the lines in italics immediately following each header - they start and end with underscores)
+-- The italic _section descriptions_ are TEMPLATE INSTRUCTIONS that must be preserved exactly as-is - they guide what content belongs in each section
+-- ONLY update the actual content that appears BELOW the italic _section descriptions_ within each existing section
 -- Do NOT add any new sections, summaries, or information outside the existing structure
 - Do NOT reference this note-taking process or instructions anywhere in the notes
-- It's OK to skip updating a section if there are no substantial new insights to add
+- It's OK to skip updating a section if there are no substantial new insights to add. Do not add filler content like "No info yet", just leave sections blank/unedited if appropriate.
 - Write DETAILED, INFO-DENSE content for each section - include specifics like file paths, function names, error messages, exact commands, technical details, etc.
 - Do not include information that's already in the CLAUDE.md files included in the context
 - Keep each section under ~${MAX_SECTION_TOKENS} tokens/words - if a section is approaching this limit, condense it by cycling out less important details while preserving the most critical information
@@ -32,4 +33,11 @@ CRITICAL RULES FOR EDITING:
 
 Use the Edit tool with file_path: {{notesPath}}
 
-REMEMBER: Use Edit tool once and stop. Do not continue after the edit. Only include insights from the actual user conversation, never from these note-taking instructions.
+STRUCTURE PRESERVATION REMINDER:
+Each section has TWO parts that must be preserved exactly as they appear in the current file:
+1. The section header (line starting with #)
+2. The italic description line (the _italicized text_ immediately after the header - this is a template instruction)
+
+You ONLY update the actual content that comes AFTER these two preserved lines. The italic description lines starting and ending with underscores are part of the template structure, NOT content to be edited or removed.
+
+REMEMBER: Use the Edit tool in parallel and stop. Do not continue after the edits. Only include insights from the actual user conversation, never from these note-taking instructions. Do not delete or change section headers or italic _section descriptions_.
