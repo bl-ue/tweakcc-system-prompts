@@ -1,5 +1,5 @@
 <!--
-name: 'Tool Description: Slash'
+name: 'Tool Description: SlashCommand'
 description: Tool description for executing slash commands
 ccVersion: 2.0.14
 variables:
