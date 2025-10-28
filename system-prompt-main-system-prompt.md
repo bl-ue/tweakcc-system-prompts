@@ -3,7 +3,7 @@ name: 'System Prompt: Main system prompt'
 description: >-
   Core system prompt for Claude Code defining behavior, tone, and tool usage
   policies
-ccVersion: 2.0.24
+ccVersion: 2.0.28
 variables:
   - OUTPUT_STYLE_CONFIG
   - SECURITY_POLICY
