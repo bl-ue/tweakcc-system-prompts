@@ -1,7 +1,6 @@
 <!--
 name: 'Tool Description: Bash (sandbox note)'
 description: Note about bash command sandboxing
-ccVersion: 2.0.26
-variables:
-  - RESTRICTIONS_LIST
+ccVersion: 2.0.30
 -->
+
