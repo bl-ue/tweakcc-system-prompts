@@ -1,7 +1,7 @@
 <!--
 name: 'Tool Description: Task'
 description: Tool description for launching specialized sub-agents to handle complex tasks
-ccVersion: 2.0.30
+ccVersion: 2.0.34
 variables:
   - TASK_TOOL
   - AGENT_TYPE_REGISTRY_STRING
