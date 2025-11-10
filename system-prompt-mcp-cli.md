@@ -1,7 +1,7 @@
 <!--
 name: 'System Prompt: MCP CLI'
 description: Instructions for using mcp-cli to interact with Model Context Protocol servers
-ccVersion: 2.0.34
+ccVersion: 2.0.36
 variables:
   - READ_TOOL_NAME
   - WRITE_TOOL_NAME
@@ -53,6 +53,7 @@ mcp-cli servers                        # List all connected MCP servers
 mcp-cli tools [server]                 # List available tools (optionally filter by server)
 mcp-cli grep <pattern>                 # Search tool names and descriptions
 mcp-cli resources [server]             # List MCP resources
+mcp-cli read <server>/<resource>       # Read an MCP resource
 \`\`\`
 
 **CORRECT Usage Pattern:**
