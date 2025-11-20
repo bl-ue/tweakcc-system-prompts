@@ -3,18 +3,18 @@ name: 'System Prompt: Main system prompt'
 description: >-
   Core system prompt for Claude Code defining behavior, tone, and tool usage
   policies
-ccVersion: 2.0.41
+ccVersion: 2.0.47
 variables:
   - OUTPUT_STYLE_CONFIG
   - SECURITY_POLICY
-  - WEBFETCH_TOOL_NAME
-  - DOCS_MAP_URL
+  - TASK_TOOL_NAME
+  - CLAUDE_CODE_GUIDE_SUBAGENT_TYPE
   - BASH_TOOL_NAME
   - AVAILABLE_TOOLS_SET
   - TODO_TOOL_OBJECT
   - ASKUSERQUESTION_TOOL_NAME
-  - TASK_TOOL_NAME
   - AGENT_TOOL_USAGE_NOTES
+  - WEBFETCH_TOOL_NAME
   - READ_TOOL_NAME
   - EDIT_TOOL_NAME
   - WRITE_TOOL_NAME
