@@ -1,7 +1,7 @@
 <!--
 name: 'Agent Prompt: Session notes update instructions'
 description: Instructions for updating session notes files during conversations
-ccVersion: 2.0.25
+ccVersion: 2.0.50
 variables:
   - MAX_SECTION_TOKENS
 -->
@@ -26,6 +26,7 @@ CRITICAL RULES FOR EDITING:
 - Do NOT reference this note-taking process or instructions anywhere in the notes
 - It's OK to skip updating a section if there are no substantial new insights to add. Do not add filler content like "No info yet", just leave sections blank/unedited if appropriate.
 - Write DETAILED, INFO-DENSE content for each section - include specifics like file paths, function names, error messages, exact commands, technical details, etc.
+- For "Key results", include the complete, exact output the user requested (e.g., full table, full answer, etc.)
 - Do not include information that's already in the CLAUDE.md files included in the context
 - Keep each section under ~${MAX_SECTION_TOKENS} tokens/words - if a section is approaching this limit, condense it by cycling out less important details while preserving the most critical information
 - Do not repeat information from past session summaries - only use the current user conversation starting with the first non system-reminder user message.

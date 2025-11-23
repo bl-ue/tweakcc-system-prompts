@@ -1,7 +1,7 @@
 <!--
 name: 'Agent Prompt: Session notes template'
 description: Template structure for session notes tracking coding work and decisions
-ccVersion: 2.0.25
+ccVersion: 2.0.50
 -->
 
 # Session Title
@@ -24,6 +24,9 @@ _What are the important system components? How do they work/fit together?_
 
 # Learnings
 _What has worked well? What has not? What to avoid? Do not duplicate items from other sections_
+
+# Key results
+_If the user asked a specific output such as an answer to a question, a table, or other document, repeat the exact result here_
 
 # Worklog
 _Step by step, what was attempted, done? Very terse summary for each step_
